@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,16 +62,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="homeforbuyer.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Products</a></li>
-         
-          <li><a class="nav-link scrollto" href="#team">Team</a></li><ul>
-            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          <li><a class="nav-link scrollto " href="fritterlogin.php">Sign In</a></li>
-         
-       
-          
+          <li><a class="nav-link scrollto active" href="productsforbuyer.php">Products</a></li>
+          <li><a class="nav-link scrollto" href="buyernotifications.php">Notifications</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="uploads/<?php echo $_SESSION["profilepic"]; ?>" alt="Profile" class="rounded-circle" style="aspect-ratio:1/1;max-width:40px;max-height:40px;object-fit:cover;">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="left: auto; right: 0;"> <!-- Adjust the style here -->
+              <li><a class="dropdown-item" href="#"><?php echo $_SESSION["company"]; ?></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="logout.php">Sign Out</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -136,7 +145,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets\img\OIG.jpg" class="img-fluid" alt="" >
+            <img src="assets\img\OIG.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             
@@ -172,7 +181,8 @@
             <div class="swiper-slide"><img src="assets\img\clients\OIG (1).jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets\img\clients\OIG.cqx9BjGTaNVItvnsN.jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets\img\clients\OIG.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets\img\clients\OIG.kcc.jpg"class="img-fluid" alt=""></div>  
+            <div class="swiper-slide"><img src="assets\img\clients\OIG.kcc.jpg"class="img-fluid" alt=""></div>
+            
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -196,7 +206,7 @@
                 </svg>
                 <i class="bi bi-phone-fill"></i>
               </div>
-              <h4><a href="products.html" target="_blank">Mobile Waste</a></h4>
+              <h4><a  href="productsforbuyer.php" target="_blank">Mobile Waste</a></h4>
               <p>Mobile waste, also known as electronic waste or e-waste, refers to discarded mobile devices such as smartphones, tablets, laptops, and other electronic gadgets. 
                 Mobile waste is a growing environmental and health concern because it often contains hazardous materials such as lead, cadmium, mercury,
                  and brominated flame retardants that can pollute the soil, water, and air if not properly disposed of.</p>
@@ -211,7 +221,7 @@
                 </svg>
                 <i class="bi bi-pc-display"></i>
               </div>
-              <h4><a href="products.html" target="_blank">Computer Waste</a></h4>
+              <h4><a href="productsforbuyer.php" target="_blank">Computer Waste</a></h4>
               <p>Computer waste, also known as electronic waste or e-waste, refers to discarded computers and computer peripherals such as monitors, keyboards, and printers. Computers are made up of various materials, including plastics, metals, and toxic substances like lead, mercury, 
                 and cadmium, which can pose environmental and health risks if not properly managed.</p>
             </div>

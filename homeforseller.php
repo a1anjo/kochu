@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,19 +62,26 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Products</a></li>
-         
-          <li><a class="nav-link scrollto" href="#team">Team</a></li><ul>
+            <li><a class="nav-link scrollto" href="homeforseller.php">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+            <li><a class="nav-link scrollto active" href="productsforseller.php">Products</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          <li><a class="nav-link scrollto " href="fritterlogin.php">Sign In</a></li>
-         
-       
-          
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="uploads/<?php echo $_SESSION["sprofilepic"]; ?>" alt="Profile" class="rounded-circle" style="aspect-ratio:1/1;max-width:40px;max-height:40px;object-fit:cover;">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="left: auto; right: 0;"> <!-- Adjust the style here -->
+                <li><a class="dropdown-item" href="#"><?php echo $_SESSION["scompany"]; ?></a></li>
+                <li><a class="dropdown-item" href="sellerupload.php">Upload Product</a></li>
+                <li><a class="dropdown-item" href="viewrequestseller.php">View Requests</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="logout.php">Sign Out</a></li>
+            </ul>
+            </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
@@ -136,10 +146,9 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets\img\OIG.jpg" class="img-fluid" alt="" >
+            <img src="assets\img\OIG.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            
             <p>
               We are a team of aspiring engineers who are passionate about protecting the environment by providing 
               responsible and sustainable solution for electronic waste disposal.</p>
@@ -172,7 +181,8 @@
             <div class="swiper-slide"><img src="assets\img\clients\OIG (1).jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets\img\clients\OIG.cqx9BjGTaNVItvnsN.jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets\img\clients\OIG.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets\img\clients\OIG.kcc.jpg"class="img-fluid" alt=""></div>  
+            <div class="swiper-slide"><img src="assets\img\clients\OIG.kcc.jpg"class="img-fluid" alt=""></div>
+            
           </div>
           <div class="swiper-pagination"></div>
         </div>
