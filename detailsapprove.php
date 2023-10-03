@@ -225,7 +225,7 @@ if (isset($_POST["approve"])) {
     $q = "UPDATE products SET status = 'APPROVED' WHERE pid = $pid"; // Corrected query
     if(mysqli_query($connect, $q)) {
         echo "Successfully approved $pid";
-        echo '<script>window.location.href = "approveproducts.php";</script>';
+        echo '<script>window.location.href = "Adminside/approveproducts.php";</script>';
     } else {
         echo "Error";
     }
@@ -234,7 +234,7 @@ elseif (isset($_POST["reject"])) {
     $q = "DELETE FROM products  WHERE pid = $pid"; // Corrected query
     if(mysqli_query($connect, $q)) {
         echo "Successfully removed $pid";
-        echo '<script>window.location.href = "approveproducts.php";</script>';
+        echo '<script>window.location.href = "Adminside/approveproducts.php";</script>';
     } else {
         echo "Error";
     }
